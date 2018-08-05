@@ -1,0 +1,26 @@
+.todo-card__box {
+  padding: 10px 0 20px 0;
+}
+
+.todo-card__container {
+  padding: 10px;
+  margin: 7px;
+  font-size: 14px;
+  border: 1px solid #CDCDCD;
+  border-radius: 4px;
+}
+
+.todo-card__title, .todo-card__status {
+  display: flex;
+  padding-top: 4px;
+}
+
+.todo-card__intro {
+  font-style: italic;
+  width: 70px;
+}
+
+.todo-card__title-text {
+  text-transform: capitalize;
+  width: 270px;
+}
