@@ -11,9 +11,9 @@ export default class CardUser extends Component {
     goToToDos: PropTypes.func.isRequired
   };
 
-  handleClick = (userId) => () => {
+  handleClick = (userId, username) => () => {
     this.props.goToAlbums(userId);
-    this.props.goToPosts(userId);
+    this.props.goToPosts(userId, username);
     this.props.goToToDos(userId)
   };
 
@@ -36,7 +36,7 @@ export default class CardUser extends Component {
     ];
 
     return(
-        <div onClick={this.handleClick(user.id)} className="card-user__container">
+        <div onClick={this.handleClick(user)} className="card-user__container">
           <div className="card-user__identity">
             <div className="card-user__username">{user.username}</div>
           </div>

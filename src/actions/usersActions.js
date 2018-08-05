@@ -10,7 +10,8 @@ import {
   FETCH_PHOTOS,
   FETCH_POSTS,
   FETCH_COMMENTS,
-  FETCH_TODOS
+  FETCH_TODOS,
+  FETCH_SELECTED_USER_INFO
 } from '../reducers/usersReducer';
 
 export function fetchUsers() {
@@ -58,14 +59,19 @@ export function fetchPhotos(albumId) {
   }
 }
 
-export function fetchPosts(userId) {
+export function fetchPosts(user) {
   return async (dispatch) => {
     try {
-      const posts = await getPosts(userId);
+      const posts = await getPosts(user.id);
 
       dispatch({
         type: FETCH_POSTS,
         posts
+      });
+
+      dispatch({
+        type: FETCH_SELECTED_USER_INFO,
+        selectedUser: user,
       })
     } catch (e) {
       console.log('fetchPosts Action Error:', e)

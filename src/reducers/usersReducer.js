@@ -3,7 +3,8 @@ export const FETCH_USER_ALBUM = 'frontendApp/users/fetchAlbum';
 export const FETCH_PHOTOS = 'frontendApp/users/fetchPhotos';
 export const FETCH_POSTS = 'frontendApp/users/fetchPosts';
 export const FETCH_COMMENTS = 'frontendApp/users/fetchComments';
-export const FETCH_TODOS = 'frontendApp/users/getToDos';
+export const FETCH_TODOS = 'frontendApp/users/fetchToDos';
+export const FETCH_SELECTED_USER_INFO = 'frontendApp/users/fetchSelectedUser';
 
 export const initialState = {
   users: [],
@@ -11,7 +12,8 @@ export const initialState = {
   photos: [],
   posts: [],
   comments: [],
-  toDos: []
+  toDos: [],
+  selectedUser: {}
 };
 
 export default function reducer(state = initialState, action = {}) {
@@ -50,6 +52,12 @@ export default function reducer(state = initialState, action = {}) {
       return {
         ...state,
         toDos: action.toDos
+      }
+    }
+    case FETCH_SELECTED_USER_INFO: {
+      return {
+        ...state,
+        selectedUser: action.selectedUser
       }
     }
     default:
