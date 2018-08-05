@@ -29,3 +29,7 @@
   display: flex;
   text-transform: capitalize;
 }
+
+.selected-user__album-title {
+  width: 70%;
+}

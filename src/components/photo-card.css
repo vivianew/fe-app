@@ -1,0 +1,29 @@
+.photo-card__container {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 10px;
+  justify-content: center;
+}
+
+.photo-card__box {
+  display: flex;
+  margin: 7px;
+  padding: 5px;
+  background-color: #CDCDCD;
+  border-radius: 4px;
+  width: 175px;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.photo-card__title {
+  text-transform: capitalize;
+  font-size: 14px;
+  width: 150px;
+  padding: 10px;
+}
+
+.photo-card__thumbnail {
+  padding-bottom: 10px;
+}

@@ -25,7 +25,7 @@ export default class SelectedUserCard extends Component {
       {album &&
         <div className="selected-user__album">
           <div className="selected-user__intro">Album</div>
-          <div>{album.title}</div>
+          <div className="selected-user__album-title">{album.title}</div>
         </div>
       }
     </div>
