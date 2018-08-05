@@ -1,0 +1,25 @@
+.selected-user__container {
+  background-color: #99D3DF;
+  color: floralwhite;
+  padding: 10px;
+  border-bottom: 1px solid;
+}
+
+.selected-user__name {
+  display: flex;
+}
+
+.selected-user__intro {
+  font-style: italic;
+  padding-right: 10px;
+}
+
+.selected-user__company-container {
+  display: flex;
+  padding-top: 4px;
+}
+
+.selected-user__company {
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
