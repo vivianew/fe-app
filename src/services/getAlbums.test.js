@@ -1,23 +1,24 @@
-import getUsers from './getUsers';
+import getAlbums from './getAlbums';
 import axios from 'axios';
 
-describe('getUsers service', () => {
-  it('should get users', async () => {
+describe('getAlbums service', () => {
+  it('should get albums', async () => {
     axios.get.mockImplementationOnce(() =>
       Promise.resolve({
         data: { id: 1 }
       })
     );
-    const result = await getUsers();
+    const result = await getAlbums();
     expect(result).toEqual({ id: 1 });
   });
 
   it('should return an error', async () => {
+    const error = new Error('testError');
     axios.get.mockImplementationOnce(() => {
-      throw new Error('testError');
+      throw error;
     });
 
-    const result = await getUsers();
-    expect(result).toEqual(new Error('testError'));
+    const result = await getAlbums();
+    expect(result).toEqual(error);
   });
 });

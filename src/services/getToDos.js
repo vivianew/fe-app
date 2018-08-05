@@ -7,6 +7,6 @@ export default async function getToDos(userId) {
 
     return result.data;
   } catch (e) {
-    console.log('getToDos error:', e);
+    return e;
   }
 }

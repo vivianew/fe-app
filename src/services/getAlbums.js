@@ -8,6 +8,6 @@ export default async function getAlbums(userId) {
 
     return result.data;
   } catch (e) {
-    console.log('getAlbums error:', e);
+    return e;
   }
 }

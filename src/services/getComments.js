@@ -7,6 +7,6 @@ export default async function getComments(postId) {
 
     return result.data;
   } catch (e) {
-    console.log('getComments error:', e);
+    return e;
   }
 }

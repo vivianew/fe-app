@@ -7,6 +7,6 @@ export default async function getPhotos(albumId) {
 
     return result.data;
   } catch (e) {
-    console.log('getPhotos error:', e);
+    return e;
   }
 }

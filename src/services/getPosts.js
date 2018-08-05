@@ -7,6 +7,6 @@ export default async function getPosts(userId) {
 
     return result.data;
   } catch (e) {
-    console.log('getPosts error:', e);
+    return e;
   }
 }
