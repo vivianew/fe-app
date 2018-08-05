@@ -39,17 +39,16 @@ export default class CardUser extends Component {
         <div onClick={this.handleClick(user.id)} className="card-user__container">
           <div className="card-user__identity">
             <div className="card-user__username">{user.username}</div>
-            <div className="card-user__name">{user.name}</div>
           </div>
 
           <div className="card-user__company-info">
-            <div>{user.company.name}</div>
-            <div>{user.company.catchPhrase}</div>
+            <div className="card-user__company-name">{user.company.name}</div>
+            <div className="card-user__company-quote">{user.company.catchPhrase}</div>
           </div>
 
           <div className="card-user__links">
             {subjects.map(subject =>
-              <Link key={subject.link} to={subject.link}>
+              <Link className="card-user__link" key={subject.link} to={subject.link}>
                 <div>{subject.name}</div>
               </Link>
             )}

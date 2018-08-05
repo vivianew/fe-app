@@ -1,5 +1,40 @@
 .card-user__container {
-  background-color: #98878F;
-  padding: 25px;
+  background-color: #99D3DF;
   margin: 10px 0;
+  color: floralwhite;
+}
+
+.card-user__identity {
+  padding: 10px;
+  border-bottom: 1px solid;
+  font-size: 18px;
+}
+
+.card-user__company-info {
+  padding: 20px;
+  text-align: center;
+}
+
+.card-user__company-name {
+  letter-spacing: 2px;
+  padding-bottom: 8px;
+  text-transform: uppercase;
+}
+
+.card-user__company-quote {
+  font-style: italic;
+  font-size: 14px;
+}
+
+.card-user__links {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  background-color: #CDCDCD;
+  padding: 15px;
+}
+
+.card-user__link  {
+  text-decoration: none;
+  color: floralwhite;
 }
