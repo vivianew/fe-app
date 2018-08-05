@@ -34,7 +34,8 @@
   padding: 15px;
 }
 
-.card-user__link  {
+.card-user__link {
   text-decoration: none;
   color: floralwhite;
+  font-size: 15px;
 }

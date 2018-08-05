@@ -3,17 +3,23 @@ import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import { fetchPhotos } from '../actions/usersActions';
 import AlbumCard from '../components/AlbumCard';
+import SelectedUserCard from '../components/SelectedUserCard';
+import './album.css';
 
 export class AlbumContainer extends Component {
   static propTypes = {
-    album: PropTypes.array
+    album: PropTypes.array,
+    selectedUser: PropTypes.object
   };
 
   render() {
-    const { album } = this.props;
+    const { album, selectedUser } = this.props;
     return (
       <div>
-        <div>
+        <SelectedUserCard
+          user={selectedUser}
+        />
+        <div className="album__container">
           {album.map(oneAlbum =>
             <AlbumCard
               key={oneAlbum.id}
@@ -27,9 +33,10 @@ export class AlbumContainer extends Component {
   }
 }
 
-function mapStateToProps({ users: { album } }) {
+function mapStateToProps({ users: { album, selectedUser } }) {
   return {
-    album
+    album,
+    selectedUser
   }
 }
 

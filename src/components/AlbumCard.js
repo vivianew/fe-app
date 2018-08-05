@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { Link } from 'react-router';
-
+import './album-card.css';
 
 export default class AlbumCard extends Component {
   static propTypes = {
@@ -16,11 +16,13 @@ export default class AlbumCard extends Component {
   render() {
     const { album } = this.props;
     return(
-      <Link to={`/photos`}>
-        <div onClick={this.handleClick(album.id)}>
-          {album.title}
-        </div>
-      </Link>
+      <div className="album-card__container">
+        <Link to={`/photos`} className="album-card__link">
+          <div onClick={this.handleClick(album.id)} className="album-card__title">
+            {album.title}
+          </div>
+        </Link>
+      </div>
     )
   }
 }

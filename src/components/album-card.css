@@ -1,0 +1,18 @@
+.album-card__container {
+  border: 1px solid;
+  margin: 10px;
+  padding: 20px;
+  border: 2px solid #CDCDCD;
+  border-radius: 4px;
+}
+
+.album-card__link {
+  text-decoration: none;
+  text-transform: capitalize;
+  font-size: 15px;
+  color: black;
+}
+
+.album-card__container:hover {
+  background-color: #99D3DF;
+}
