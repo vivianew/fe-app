@@ -30,16 +30,24 @@ export default class PostCard extends Component {
         {posts.map(post =>
           <div key={post.id} className="post-card__card">
             <div className="post-card__title">{post.title}</div>
-            <div>{post.body}</div>
-            <div onClick={this.handleClick(post.id)}>
-              Show Comments
+            <div className="post-card__body">{post.body}</div>
+            <div onClick={this.handleClick(post.id)} className="post-card__comment-text">
+              {this.state.showComments ? <div>Hide Comments</div> : <div>Show Comments</div>}
             </div>
             {comments && this.state.showComments &&
               comments.map(comment =>
-                <div key={comment.id}>
-                  <div>Commentator: {comment.name}</div>
-                  <div>Email: {comment.email}</div>
-                  <div>Comment: {comment.body}</div>
+                <div key={comment.id} className="post-card__comment-container">
+                  <div className="post-card__comment-body">" {comment.body} "</div>
+
+                  <div className="post-card__comment-info">
+                    <div className="post-card__comment-intro">By</div>
+                    <div>{comment.name}</div>
+                  </div>
+
+                  <div className="post-card__comment-info">
+                    <div className="post-card__comment-intro">Contact</div>
+                    <div className="post-card__comment-email">{comment.email}</div>
+                  </div>
                 </div>
               )
             }

@@ -1,8 +1,50 @@
 .post-card__card {
-  background-color: aquamarine;
+  background-color: #99D3DF;
+  padding: 10px;
   margin: 10px;
 }
 
 .post-card__title {
   font-weight: bold;
+  padding-bottom: 15px;
+  text-transform: capitalize;
+}
+
+.post-card__body {
+  font-size: 15px;
+  text-align: left;
+  padding-bottom: 10px;
+}
+
+.post-card__comment-text {
+  font-size: 14px;
+}
+
+.post-card__comment-container {
+  font-size: 14px;
+  background-color: #88BBD6;
+  padding: 6px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  border-radius: 4px;
+}
+
+.post-card__comment-body {
+  font-style: italic;
+  padding-bottom: 5px;
+  border-bottom: 1px solid #CDCDCD;
+}
+
+.post-card__comment-info {
+  display: flex;
+  padding-top: 4px;
+}
+
+.post-card__comment-intro {
+  font-style: italic;
+  width: 70px;
+}
+
+.post-card__comment-email {
+  text-transform: lowercase;
 }
