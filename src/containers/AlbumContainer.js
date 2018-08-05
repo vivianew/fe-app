@@ -24,7 +24,7 @@ export class AlbumContainer extends Component {
             <AlbumCard
               key={oneAlbum.id}
               album={oneAlbum}
-              goToPhotos={albumId => this.props.fetchPhotos(albumId)}
+              goToPhotos={album => this.props.fetchPhotos(album)}
             />
           )}
         </div>

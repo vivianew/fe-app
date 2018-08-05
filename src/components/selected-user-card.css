@@ -23,3 +23,9 @@
   letter-spacing: 2px;
   text-transform: uppercase;
 }
+
+.selected-user__album {
+  padding-top: 4px;
+  display: flex;
+  text-transform: capitalize;
+}

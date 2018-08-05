@@ -11,7 +11,8 @@ import {
   FETCH_POSTS,
   FETCH_COMMENTS,
   FETCH_TODOS,
-  FETCH_SELECTED_USER_INFO
+  FETCH_SELECTED_USER_INFO,
+  FETCH_SELECTED_ALBUM
 } from '../reducers/usersReducer';
 
 export function fetchUsers() {
@@ -44,14 +45,19 @@ export function fetchUserAlbum(user) {
   }
 }
 
-export function fetchPhotos(albumId) {
+export function fetchPhotos(album) {
   return async (dispatch) => {
     try {
-      const photos = await getPhotos(albumId);
+      const photos = await getPhotos(album.id);
 
       dispatch({
         type: FETCH_PHOTOS,
         photos
+      });
+
+      dispatch({
+        type: FETCH_SELECTED_ALBUM,
+        selectedAlbum: album
       });
     } catch (e) {
       console.log('fetchPhotos Action Error:', e);
@@ -71,7 +77,7 @@ export function fetchPosts(user) {
 
       dispatch({
         type: FETCH_SELECTED_USER_INFO,
-        selectedUser: user,
+        selectedUser: user
       })
     } catch (e) {
       console.log('fetchPosts Action Error:', e)

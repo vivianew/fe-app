@@ -5,6 +5,7 @@ export const FETCH_POSTS = 'frontendApp/users/fetchPosts';
 export const FETCH_COMMENTS = 'frontendApp/users/fetchComments';
 export const FETCH_TODOS = 'frontendApp/users/fetchToDos';
 export const FETCH_SELECTED_USER_INFO = 'frontendApp/users/fetchSelectedUser';
+export const FETCH_SELECTED_ALBUM = 'frontendApp/users/fetchSelectedAlbum';
 
 export const initialState = {
   users: [],
@@ -13,7 +14,8 @@ export const initialState = {
   posts: [],
   comments: [],
   toDos: [],
-  selectedUser: {}
+  selectedUser: {},
+  selectedAlbum: {}
 };
 
 export default function reducer(state = initialState, action = {}) {
@@ -58,6 +60,12 @@ export default function reducer(state = initialState, action = {}) {
       return {
         ...state,
         selectedUser: action.selectedUser
+      }
+    }
+    case FETCH_SELECTED_ALBUM: {
+      return {
+        ...state,
+        selectedAlbum: action.selectedAlbum
       }
     }
     default:

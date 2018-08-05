@@ -8,7 +8,7 @@ export default class SelectedUserCard extends Component {
   };
 
   render() {
-    const { user } = this.props;
+    const { user, album } = this.props;
 
     return(
     <div className="selected-user__container">
@@ -21,6 +21,13 @@ export default class SelectedUserCard extends Component {
         <div className="selected-user__intro">From</div>
         {user.company && <div className="selected-user__company">{user.company.name}</div>}
       </div>
+
+      {album &&
+        <div className="selected-user__album">
+          <div className="selected-user__intro">Album</div>
+          <div>{album.title}</div>
+        </div>
+      }
     </div>
     )
   }

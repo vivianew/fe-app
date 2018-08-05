@@ -3,16 +3,24 @@ import PropTypes from 'prop-types';
 import { fetchPhotos } from "../actions/usersActions";
 import { connect } from "react-redux";
 import PhotoCard from '../components/PhotoCard';
+import SelectedUserCard from '../components/SelectedUserCard';
+
 
 export class PhotoContainer extends Component {
   static propTypes = {
-    photos: PropTypes.array
+    photos: PropTypes.array,
+    selectedUser: PropTypes.object,
+    selectedAlbum: PropTypes.object
   };
 
   render() {
-    const { photos } = this.props;
+    const { photos, selectedUser, selectedAlbum } = this.props;
     return (
       <div>
+        <SelectedUserCard
+          user={selectedUser}
+          album={selectedAlbum}
+        />
         <PhotoCard
           photos={photos}
         />
@@ -21,9 +29,11 @@ export class PhotoContainer extends Component {
   }
 }
 
-function mapStateToProps({ users: { photos } }) {
+function mapStateToProps({ users: { photos, selectedUser, selectedAlbum } }) {
   return {
-    photos
+    photos,
+    selectedUser,
+    selectedAlbum
   }
 }
 
