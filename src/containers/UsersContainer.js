@@ -24,7 +24,7 @@ export class UsersContainer extends Component {
             key={user.id}
             user={user}
             goToAlbums={userId => this.props.fetchUserAlbum(userId)}
-            goToPosts={(user) => this.props.fetchPosts(user)}
+            goToPosts={user => this.props.fetchPosts(user)}
             goToToDos={userId => this.props.fetchToDos(userId)}
           />
         ))}

@@ -29,10 +29,10 @@ export function fetchUsers() {
   }
 }
 
-export function fetchUserAlbum(userId) {
+export function fetchUserAlbum(user) {
   return async (dispatch) => {
     try {
-      const albums = await getAlbums(userId);
+      const albums = await getAlbums(user.id);
 
       dispatch({
         type: FETCH_USER_ALBUM,
@@ -94,10 +94,10 @@ export function fetchPostComments(postId) {
   }
 }
 
-export function fetchToDos(userId) {
+export function fetchToDos(user) {
   return async (dispatch) => {
     try {
-      const toDos = await getToDos(userId);
+      const toDos = await getToDos(user.id);
 
       dispatch({
         type: FETCH_TODOS,
