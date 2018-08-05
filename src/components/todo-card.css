@@ -24,3 +24,11 @@
   text-transform: capitalize;
   width: 270px;
 }
+
+.todo-card__complete {
+  color: forestgreen;
+}
+
+.todo-card__not-complete {
+  color: indianred;
+}

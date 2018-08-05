@@ -14,13 +14,18 @@ export default class ToDoCard extends Component {
         {toDos.map(toDo =>
           <div key={toDo.id} className="todo-card__container">
             <div className="todo-card__title">
-              <div className="todo-card__intro">Title</div>
+              <div className="todo-card__intro">Task</div>
               <div className="todo-card__title-text">{toDo.title}</div>
             </div>
 
             <div className="todo-card__status">
               <div className="todo-card__intro">Status</div>
-              <div>{toDo.completed ? <div>Completed</div> : <div>Not Completed</div>}</div>
+              <div>
+                {toDo.completed ?
+                  <div className="todo-card__complete">Completed</div> :
+                  <div className="todo-card__not-complete">Not Completed</div>
+                }
+              </div>
             </div>
           </div>
         )}
