@@ -6,6 +6,7 @@ import { Router, browserHistory } from 'react-router';
 import thunk from 'redux-thunk';
 import routes from './routes';
 import reducers from './reducers';
+import './index.css';
 
 const createStoreWithMiddleware = applyMiddleware(thunk)(createStore);
 

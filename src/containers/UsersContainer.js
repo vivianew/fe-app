@@ -3,6 +3,7 @@ import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import { fetchUsers, fetchUserAlbum, fetchPosts, fetchToDos } from '../actions/usersActions';
 import CardUser from '../components/CardUser';
+import './users-container.css';
 
 export class UsersContainer extends Component {
   static propTypes = {
@@ -17,7 +18,7 @@ export class UsersContainer extends Component {
     const { users } = this.props;
 
     return (
-      <div>
+      <div className="user-container__container">
         {users.map(user => (
           <CardUser
             key={user.id}
