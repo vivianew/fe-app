@@ -1,9 +1,7 @@
 import getUsers from "./getUsers";
 
 describe('getUsers', () => {
-  it('should work', async () => {
-    console.log('i hate you');
+  it('should get users', async () => {
     const result = await getUsers();
-    console.log('result', result);
   })
 });

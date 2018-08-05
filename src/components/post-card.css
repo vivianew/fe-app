@@ -1,0 +1,8 @@
+.post-card__card {
+  background-color: aquamarine;
+  margin: 10px;
+}
+
+.post-card__title {
+  font-weight: bold;
+}
